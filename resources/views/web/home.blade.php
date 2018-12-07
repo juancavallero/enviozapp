@@ -28,6 +28,13 @@
 
                     <div class="col-md-12">
                         <h2 class="light bordered"><span>Ubicaciones de Usuarios</span></h2>
+                        {!! Form::open(['url' => 'getUbicaciones']) !!}
+                        {!! Form::select('usuario',$usuarios,null,['id'=>'usuario','class'=>'form-control']) !!}
+                        {!! Form::submit('Buscar', ['class' => 'btn green-meadow btn-oneclick']) !!}
+                        {!! Form::close() !!}
+                        <br>
+                        <br>
+                        <br>
                         <div class="map" id="map"></div>
 
                     </div>
@@ -41,21 +48,21 @@
 @endsection
 
 <script type="text/javascript">
-//    console.log("algo");
+    //    console.log("algo");
     var ubicaciones = [];
-    @foreach($ubicaciones as $ubicacion)
-        var latitud = "<?php echo $ubicacion->latitud?>";
-        var longitud = "<?php echo $ubicacion->longitud?>";
-        var nombre = "<?php echo $ubicacion->user->nombre?>";
-        var apellido = "<?php echo $ubicacion->user->apellido?>";
-        var direccion = "<?php echo $ubicacion->user->direccion?>";
-        ubica = new Object();
-        ubica['latitud'] = latitud;
-        ubica['longitud'] = longitud;
-        ubica['nombre'] = nombre;
-        ubica['apellido'] = apellido;
-        ubica['direccion'] = direccion;
-        ubicaciones.push(ubica);
+            @foreach($ubicaciones as $ubicacion)
+    var latitud = "<?php echo $ubicacion->latitud?>";
+    var longitud = "<?php echo $ubicacion->longitud?>";
+    var nombre = "<?php echo $ubicacion->user->nombre?>";
+    var apellido = "<?php echo $ubicacion->user->apellido?>";
+    var direccion = "<?php echo $ubicacion->user->direccion?>";
+    ubica = new Object();
+    ubica['latitud'] = latitud;
+    ubica['longitud'] = longitud;
+    ubica['nombre'] = nombre;
+    ubica['apellido'] = apellido;
+    ubica['direccion'] = direccion;
+    ubicaciones.push(ubica);
     @endforeach
 
 

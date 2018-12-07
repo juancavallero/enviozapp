@@ -37,7 +37,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
     $this->get('/', 'HomeController@homeweb')->name('homeweb');
-    $this->get('/contacto', 'HomeController@contacto')->name('contacto');
+    $this->post('/getUbicaciones', 'HomeController@getUbicacionesUser')->name('getUbicaciones');
 });
 
 
