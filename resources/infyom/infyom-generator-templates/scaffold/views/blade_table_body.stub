@@ -1,0 +1,30 @@
+<table class="table" id="index_table">
+    <thead class="tabla_cabecera">
+        <tr>
+            $FIELD_HEADERS$
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            $FIELD_HEADERS$
+            <th></th>
+        </tr>
+    </tfoot>
+    <tbody>
+    @foreach($$MODEL_NAME_PLURAL_CAMEL$ as $$MODEL_NAME_CAMEL$)
+        <tr class="odd gradeX">
+            $FIELD_BODY$
+            <td>
+                {!! Form::open(['route' => ['$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.destroy', $$MODEL_NAME_CAMEL$->id], 'method' => 'delete']) !!}
+                <div class='btn-group'>
+                    <a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.show', [$$MODEL_NAME_CAMEL$->id]) !!}" class='btn btn-xs green popovers btntablas' data-container="body" data-trigger="hover" data-placement="bottom" data-content="Consultar"><i class="glyphicon glyphicon-eye-open"></i></a>
+                    <a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.edit', [$$MODEL_NAME_CAMEL$->id]) !!}" class='btn btn-xs blue popovers btntablas' data-container="body" data-trigger="hover" data-placement="bottom" data-content="Editar"><i class="glyphicon glyphicon-edit"></i></a>
+                    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs popovers btn-eliminar btntablas','data-container' => 'body','data-trigger' => 'hover', 'data-placement' => 'bottom','data-content' => 'Eliminar']) !!}
+                </div>
+                {!! Form::close() !!}
+            </td>
+        </tr>
+    @endforeach
+    </tbody>
+</table>

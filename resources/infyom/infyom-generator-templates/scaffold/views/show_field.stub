@@ -1,0 +1,4 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<div class="col-md-6">
+    {{ Form::mdText('$FIELD_NAME$',  $$MODEL_NAME_CAMEL$->$FIELD_NAME$, ['disabled' => 'disabled', 'help-block' => '$FIELD_NAME_TITLE$', 'icon-class' => 'fa fa-caret-right']) }}
+</div>

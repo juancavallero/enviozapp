@@ -1,0 +1,8 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<div class="col-md-3">
+    @if (isset($$TABLE_NAME$))
+        {!! Form::mdCheckbox('$FIELD_NAME$', ["1"=>"$CHECKBOX_VALUE$"], $$TABLE_NAME$->$FIELD_NAME$ == 1) !!}
+    @else
+        {!! Form::mdCheckbox('$FIELD_NAME$', ["1"=>"$CHECKBOX_VALUE$"], false) !!}
+    @endif
+</div>

@@ -1,0 +1,23 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Image Driver
+    |--------------------------------------------------------------------------
+    |
+    | Intervention Image supports "GD Library" and "Imagick" to process images
+    | internally. You may choose one of them according to your PHP
+    | configuration. By default PHP's "GD Library" implementation is used.
+    |
+    | Supported: "gd", "imagick"
+    |
+    */
+
+    'driver' => 'gd',
+    'full_size'   => env('UPLOAD_FULL_SIZE'),
+    'icon_size'   => env('UPLOAD_ICON_SIZE'),
+    'full_size_galeria'   => env('UPLOAD_FULL_SIZE'),
+    'icon_size_galeria'   => env('UPLOAD_ICON_SIZE'),
+];

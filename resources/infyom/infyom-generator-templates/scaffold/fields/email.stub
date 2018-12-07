@@ -1,0 +1,4 @@
+<!-- $FIELD_NAME_TITLE$ Field -->
+<div class="col-md-6">
+    {{ Form::mdText('$FIELD_NAME$', null, ['type' => 'email', 'help-block' => '$FIELD_NAME_TITLE$', 'icon-class' => 'fa fa-envelope']) }}
+</div>

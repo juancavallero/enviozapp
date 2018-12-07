@@ -1,0 +1,55 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": true,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "latitud",
+    "dbType": "float,11,7",
+    "htmlType": "text",
+    "validations": "required|min:3",
+    "searchable": true
+  },
+  {
+    "name": "longitud",
+    "dbType": "float,11,7",
+    "htmlType": "text",
+    "validations": "required|min:3",
+    "searchable": true
+  },
+  {
+    "name": "idUsuario",
+    "dbType": "integer:unsigned:foreign,users,id",
+    "htmlType": "text",
+    "relation": "mt1,users,idUsuario,id"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  }
+]

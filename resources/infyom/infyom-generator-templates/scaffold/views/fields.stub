@@ -1,0 +1,11 @@
+$FIELDS$
+
+<!-- Submit Field -->
+<div class="form-group col-sm-12">
+    <div class="form-actions">
+        <div class="row  col-md-offset-10">
+            {!! Form::submit('Guardar', ['class' => 'btn green-meadow btn-oneclick']) !!}
+            <a href="{!! route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index') !!}" class="btn grey-cascade">Cancelar</a>
+        </div>
+    </div>
+</div>
